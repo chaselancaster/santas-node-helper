@@ -30,13 +30,16 @@ const question2 = () => {
         const directions = data.toString()
         const directionsArray = directions.split('')
         let accumulator = 0
+        let counter = 0
         const answer = directionsArray.some((currentValue) => {
             if (currentValue === '(') {
-                
+                return accumulator += 1
             } else  if (currentValue === ')') {
-                
+                return accumulator -= 1
             }
+            return accumulator < 0;
         })
+        console.log('Basement entered at: ', answer)
     })
 }
 
