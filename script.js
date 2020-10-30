@@ -9,8 +9,11 @@ const fs = require('fs')
 const question1 = () => {
     fs.readFile('./santa.text', (err, data) => {
         const directions = data.toString()
+        const directionsArray = directions.split('')
     })
 }
+
+question1()
 
 
 
