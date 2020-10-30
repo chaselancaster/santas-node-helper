@@ -26,18 +26,7 @@ question1()
 // 2 - When does Santa first enter the basement?
 
 const question2 = () => {
-    fs.readFile('./santa.text', (err, data) => {
-        const directions = data.toString()
-        const directionsArray = directions.split('')
-        const answer = directionsArray.reduce((acc, currentValue) => {
-            if (currentValue === '(') {
-                return acc += 1
-            } else  if (currentValue === ')') {
-                return acc -= 1
-            }
-        }, 0)
-        console.log('floor:', answer)
-    })
+    
 }
 
 
