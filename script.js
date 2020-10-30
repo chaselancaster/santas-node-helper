@@ -31,16 +31,19 @@ const question2 = () => {
         const directionsArray = directions.split('')
         let accumulator = 0
         let counter = 0
-        const answer = directionsArray.some((currentValue) => {
-            if (currentValue === '(') {
-                return accumulator += 1
-            } else  if (currentValue === ')') {
-                return accumulator -= 1
+        const answer = directionsArray.some((currentItem) => {
+            if (currentItem === '(') {
+                accumulator += 1
+            } else  if (currentItem === ')') {
+                accumulator -= 1
             }
+            counter ++
             return accumulator < 0;
         })
-        console.log('Basement entered at: ', answer)
+        console.log('Basement entered at: ', counter)
     })
 }
+
+question2()
 
 
