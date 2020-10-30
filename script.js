@@ -29,6 +29,14 @@ const question2 = () => {
     fs.readFile('./santa.text', (err, data) => {
         const directions = data.toString()
         const directionsArray = directions.split('')
+        let accumulator = 0
+        const answer = directionsArray.some((currentValue) => {
+            if (currentValue === '(') {
+                
+            } else  if (currentValue === ')') {
+                
+            }
+        })
     })
 }
 
